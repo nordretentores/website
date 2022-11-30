@@ -570,13 +570,27 @@ section {
 /*--------------------------------------------------------------
 # Get Started Section
 --------------------------------------------------------------*/
+.get-started  {
+  /* color: #fff; */
+  background: url("../img/contact.jpeg") top center no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.get-started:before {
+  content: "";
+  background: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  inset: 0;
+}
+
 .get-started .content {
   padding: 30px 0;
 }
 
 .get-started .content h3 {
   font-size: 36px;
-  color: var(--color-secondary);
+  color: var(--color-primary);
   font-weight: 600;
   margin-bottom: 25px;
   padding-bottom: 25px;
@@ -589,12 +603,13 @@ section {
   display: block;
   width: 60px;
   height: 4px;
-  background: var(--color-primary);
+  background: var(--color-default);
   left: 0;
   bottom: 0;
 }
 
 .get-started .content p {
+  color: #fff;
   font-size: 14px;
 }
 
@@ -2630,11 +2645,42 @@ section {
 }
 
 /*--------------------------------------------------------------
+# Thanks
+--------------------------------------------------------------*/
+
+#thanks .container-thanks {
+  height: 100%;
+  padding: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+}
+
+#thanks .title {
+  font-size: 3rem;
+  font-weight: lighter;
+}
+
+#thanks .description {
+  font-size: 1.2rem;
+  font-weight: lighter;
+  max-width: 470px;
+  text-align: center;
+}
+
+#thanks .container-thanks i {
+  font-size: 8rem;
+  color: #25D366;
+}
+
+/*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/
 .footer {
   color: #fff;
-  background: url("../img/footer-bg.jpg") top center no-repeat;
+  /* background: url("../img/footer-bg.jpg") top center no-repeat; */
+  background-color: var(--color-default);
   background-size: cover;
   font-size: 14px;
   padding: 80px 0 30px 0;
@@ -2643,7 +2689,7 @@ section {
 
 .footer:before {
   content: "";
-  background: rgba(0, 0, 0, 0.8);
+  /* background: rgba(0, 0, 0, 0.8); */
   position: absolute;
   inset: 0;
 }
