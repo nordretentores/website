@@ -1,14 +1,3 @@
-/**
-* Template Name: UpConstruction - v1.2.1
-* Template URL: https://bootstrapmade.com/upconstruction-bootstrap-construction-website-template/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
-
-/*--------------------------------------------------------------
-# Set main reusable colors and fonts using CSS variables
-# Learn more about CSS variables at https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties
---------------------------------------------------------------*/
 /* Fonts */
 :root {
   --font-default: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
@@ -22,8 +11,8 @@
   --color-primary: #1e9edd;
   --color-secondary: #52565e;
 
-  --color-primary-rgb: 30, 158, 221;
-  --color-default-rgb: 54, 77, 89;
+  --color-default-hover: #24333b;
+  --color-primary-hover: #066797;
 }
 
 /* Smooth scroll behavior */
@@ -307,11 +296,28 @@ section {
   color: #ffffff;
 }
 
+@media (max-width: 1024px) {
+  .header .contact {
+    display: none;
+  }
+}
+
+@media (max-width: 1024px) {
+  .header .container-fluid {
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 1199px) {
+  .header .logo {
+    margin-left: 10px;
+  }
+}
 
 /*--------------------------------------------------------------
 # Desktop Navigation
 --------------------------------------------------------------*/
-@media (min-width: 1280px) {
+@media (min-width: 1279px) {
   .navbar {
     padding: 0;
   }
@@ -450,7 +456,6 @@ section {
 }
 
 @media (min-width: 1280px) {
-
   .mobile-nav-show,
   .mobile-nav-hide {
     display: none;
@@ -529,7 +534,7 @@ section {
 
   .mobile-nav-show {
     position: relative;
-    color: #fff;
+    color: var(--color-default);
     font-size: 28px;
     cursor: pointer;
     line-height: 0;
@@ -1994,7 +1999,7 @@ section {
   display: inline-block;
   padding: 12px 30px;
   padding-top: 16px;
-  transition: 0.3s;
+  transition: 0.15s ease-in;
   margin-top: 30px;
   color: #fff;
   background: var(--color-default);
@@ -2006,7 +2011,8 @@ section {
   border: 2px solid var(--color-primary);
 }
 
-.hero .info .btn-get-started .phone, .hero .info .btn-get-started .text  {
+.hero .info .btn-get-started .phone,
+.hero .info .btn-get-started .text  {
   display: block;
   margin-top: 15px;
   font-weight: lighter;
@@ -2017,7 +2023,39 @@ section {
 }
 
 .hero .info .btn-get-started:hover {
-  filter: brightness(90%);
+  background-color: var(--color-default-hover);
+  border-color: var(--color-default-hover);
+}
+
+.hero .info .btn-get-started-alt:hover {
+  background-color: var(--color-primary-hover);
+  border-color: var(--color-primary-hover);
+}
+
+@media (max-width: 576px) {
+  .hero .info {
+    height: 760px;
+  }
+
+  .hero .carousel {
+    height: 840px;
+  }
+
+  .hero .info .action-container {
+    flex-direction: column;
+  }
+
+  .hero .info .action-container a {
+    margin-top: 8px;
+  }
+
+  .hero .info .btn-get-started {
+    font-size: 14px;
+  }
+
+  .hero .info .btn-get-started .phone {
+    font-size: 20px;
+  }
 }
 
 .hero .carousel-control-prev {
